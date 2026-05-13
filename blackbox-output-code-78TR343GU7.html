@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <link rel="icon" type="image/svg+xml" href="/favicon.ico" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="theme-color" content="#fbbf24" />
+  <meta name="description" content="EBOL - Electric Basic Layout System v6.2 | PT Dirgantara Indonesia" />
+  <title>EBOL v6 | Aeronautical Maintenance System</title>
+  
+  <!-- PWA -->
+  <link rel="manifest" href="/manifest.json" />
+  <meta name="apple-mobile-web-app-capable" content="yes">
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
+  <meta name="apple-mobile-web-app-title" content="EBOL">
+  
+  <style>
+    * { font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif; }
+    body { margin: 0; overscroll-behavior: none; }
+    #root { min-height: 100vh; }
+    .no-scrollbar { -ms-overflow-style: none; scrollbar-width: none; }
+    .no-scrollbar::-webkit-scrollbar { display: none; }
+    .safe-bottom { padding-bottom: env(safe-area-inset-bottom); }
+  </style>
+  
+  <!-- Firebase Config - GANTI DENGAN CONFIG ANDA -->
+  <script>
+    window.__firebase_config = `{
+      "apiKey": "YOUR_API_KEY",
+      "authDomain": "YOUR_PROJECT.firebaseapp.com",
+      "projectId": "YOUR_PROJECT_ID",
+      "storageBucket": "YOUR_PROJECT.appspot.com",
+      "messagingSenderId": "123456789",
+      "appId": "YOUR_APP_ID"
+    }`;
+    window.__app_id = 'ebol-pwa-v6';
+  </script>
+</head>
+<body>
+  <noscript><div style="padding:20px;text-align:center;background:#020617;color:white;">JavaScript diperlukan untuk menjalankan aplikasi ini.</div></noscript>
+  <div id="root"></div>
+  <script type="module" src="/src/main.jsx"></script>
+</body>
+</html>

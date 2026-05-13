@@ -1,0 +1,35 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@layer base {
+  html { font-feature-settings: 'rlig' 1, 'calt' 1; }
+}
+
+@layer utilities {
+  .animate-in { animation-fill-mode: both; }
+  .slide-in-from-top { animation: slideInFromTop 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+  .slide-in-from-bottom-2 { animation: slideInFromBottom2 0.4s cubic-bezier(0.16, 1, 0.3, 1); }
+  .slide-in-from-bottom-4 { animation: slideInFromBottom4 0.5s cubic-bezier(0.16, 1, 0.3, 1); }
+  .zoom-in { animation: zoomIn 0.2s cubic-bezier(0.16, 1, 0.3, 1); }
+}
+
+@keyframes slideInFromTop {
+  from { transform: translateY(-20px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom2 {
+  from { transform: translateY(12px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes slideInFromBottom4 {
+  from { transform: translateY(16px); opacity: 0; }
+  to { transform: translateY(0); opacity: 1; }
+}
+
+@keyframes zoomIn {
+  from { transform: scale(0.95); opacity: 0; }
+  to { transform: scale(1); opacity: 1; }
+}
